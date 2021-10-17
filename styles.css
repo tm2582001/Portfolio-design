@@ -141,6 +141,7 @@ p{
 .details .company-name{
     font-size: 2rem;
     display: block;
+    font-weight: 600;
 }
 
 .description{
@@ -149,6 +150,7 @@ p{
 
 .description .post{
     font-size: 1.2rem;
+    font-weight: 550;
 }
 
 .description p{
@@ -213,12 +215,14 @@ circle{
     fill: none;
     stroke: url(#GradientColor);
     stroke-width: 14px;
-    stroke-dasharray: 438;
-    stroke-dashoffset: 438;
-    animation: anim 2s linear forwards;
 }
 svg{
     position: absolute;
+}
+
+.number{
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .skill-name{
@@ -227,9 +231,45 @@ svg{
     margin-bottom: 5px;
 }
 
-@keyframes anim{
+.circle-1{
+    stroke-dasharray: 430;     /* here this value is changed from 438 to 430 for better representation*/
+    stroke-dashoffset: 430;
+    animation: circle1 2s linear forwards;
+}
+.circle-2{
+    stroke-dasharray: 430;
+    stroke-dashoffset: 430;
+    animation: circle2 2s linear forwards;
+}
+.circle-3{
+    stroke-dasharray: 430;
+    stroke-dashoffset: 430;
+    animation: circle3 2s linear forwards;
+}
+.circle-4{
+    stroke-dasharray: 430;
+    stroke-dashoffset: 430;
+    animation: circle4 2s linear forwards;
+}
+
+@keyframes circle1{
     100%{
-        stroke-dashoffset: 10;
+        stroke-dashoffset: 4.38;    /*this value is calculated using 438 => 438 - 438*0.99 */
+    }
+}
+@keyframes circle2{
+    100%{
+        stroke-dashoffset: 21.9;
+    }
+}
+@keyframes circle3{
+    100%{
+        stroke-dashoffset: 17.52;
+    }
+}
+@keyframes circle4{
+    100%{
+        stroke-dashoffset: 26.28;
     }
 }
 
