@@ -66,8 +66,9 @@ p{
 }
 
 .profile-pic{
-    width: 31.25rem;  
-    padding-left: 6.25rem;
+    width: 25rem;  
+    margin-left: 5rem;
+    border-radius: 5%;
 }
 
 .intro-text{
@@ -167,11 +168,10 @@ p{
     }
 }
 
-@media (max-width:990px)and (min-width: 767px){
+@media (max-width:990px)and (min-width: 768px){
     #intro{
         background: linear-gradient(120deg,#fff,#fff 60%,#3281ba 60%, #3281ba 100%);
-        min-height: 20vh;
-
+        min-height: 60vh;
     }
     h1{
         font-size: 3rem;
@@ -181,14 +181,16 @@ p{
         margin-right: 9rem;
     }
     .profile-pic{
-        width: 23rem;
+        width: 20rem;
         height: auto;
+        margin-left: 1rem;
     }
 }
 
 @media (max-width: 767px){
     #intro{
         background: #fff;
+        min-height: 92vh;
     }
 
     h1{
@@ -199,7 +201,7 @@ p{
     /* navbar */
 
     .nav-item{
-        margin-bottom: 0;
+        justify-content: center;
     }
 
     .logo{
@@ -227,7 +229,7 @@ p{
     }
 
     .profile-pic{
-        padding-left: 0;
+        margin-left: 0;
         width: 15rem;
         height: auto;
         border-radius: 100%;
