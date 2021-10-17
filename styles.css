@@ -97,6 +97,12 @@ p{
     background: rgb(81,150,229);
     padding: 2.5rem;
 }
+
+.experience-heading{
+    text-align: center;
+    color: #fff;
+}
+
 .experience-row{
     justify-content: center;
 }
@@ -161,7 +167,12 @@ p{
 /* skills section */
 
 #skills{
+    padding: 2.5rem;
     background: linear-gradient(145deg, #d9d9dc, #ffffff);
+}
+
+.skill-heading{
+    text-align: center;
 }
 
 .skill-row{
@@ -289,7 +300,7 @@ svg{
 @media (max-width:990px)and (min-width: 768px){
     #intro{
         background: linear-gradient(120deg,#fff,#fff 60%,#3281ba 60%, #3281ba 100%);
-        min-height: 60vh;
+        min-height: 40vh;
     }
     h1{
         font-size: 3rem;
@@ -303,6 +314,16 @@ svg{
         height: auto;
         margin-left: 1rem;
     }
+
+    /* experience section */
+    .experience-heading{
+        font-size: 4rem;
+    }
+
+    /* skills section */
+    .skill-heading{
+        font-size: 4rem;
+    }
 }
 
 @media (max-width: 767px){
@@ -312,7 +333,7 @@ svg{
     }
 
     h1{
-        font-size: 2rem;
+        font-size: 3rem;
         margin-bottom: 1rem;
     }
     
@@ -343,7 +364,7 @@ svg{
     }
 
     .intro-text{
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .profile-pic{
@@ -360,10 +381,17 @@ svg{
     .work section::after{
         right: -29px;
     }
+    .experience-heading{
+        font-size: 3rem;
+    }
 
     /* skill section */
     .skill-cards{
         margin: 3rem 5rem;
+    }
+
+    .skill-heading{
+        font-size: 3rem;
     }
 
 }
