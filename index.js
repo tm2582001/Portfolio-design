@@ -13,12 +13,9 @@ function counter (number,maxPercentage){
     },2000/maxPercentage);
 }
 
+let value =[99,95,96,94]
 
-let number1 = id("number1");
-counter(number1,99);
-let number2 = id("number2");
-counter(number2,95);
-let number3 = id("number3");
-counter(number3,96);
-let number4 = id("number4");
-counter(number4,94);
+for(let i= 1; i<=value.length;i++){
+   let number = id("number" + i);
+   counter(number,value[i-1]); 
+}
