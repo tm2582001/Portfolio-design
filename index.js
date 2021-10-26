@@ -3,7 +3,6 @@ let classes = (classes) => document.getElementsByClassName(classes);
 let queryAll = (queryAll) => document.querySelectorAll(queryAll);
 
 let value =[99,95,96,94];
-let time = 0;
 
 for(let i =0;i<value.length;i++){
     const circle = queryAll("svg circle")[i];
@@ -19,28 +18,27 @@ function counter (number,maxPercentage){
             counter += 1;
             number.innerHTML = counter + "%";
         }
-        
     },2000/maxPercentage);
 }
 
-function skillPercentage(){
-    if(time===0){
-        for(let i= 0; i<value.length;i++){
-            let number = classes("number")[i];
-            counter(number,value[i]); 
-        }
-        time = 1;
+function skillPercentage(val){
+    let number = classes("number")[val];
+    console.log(number.innerHTML);
+    if(number.innerHTML == "--"){
+        counter(number,value[val]); 
     }
 }
 
-var waypoint = new Waypoint({
-    element: id('skills'),
-    handler: function() {
-        for(let i =0;i<value.length;i++){
-            const circle = queryAll("svg circle")[i];
-            circle.style.setProperty('animation', "anim 2s linear forwards");
-        }
-        skillPercentage();
-    },
-    offset: 400
-  });
+
+var skillCards = classes("skill-cards");
+for(let i=0;i<skillCards.length;i++){
+    new Waypoint({
+        element: skillCards[i],
+        handler: function() {
+                const circle = queryAll("svg circle")[i];
+                circle.style.setProperty("animation", "anim 2s linear forwards");
+            skillPercentage(i);
+        },
+        offset: "80%",
+      });
+}
