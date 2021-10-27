@@ -26,7 +26,6 @@ p{
 
 #intro{
     background: linear-gradient(120deg,#fff,#fff 60%,#3281ba 60%, #3281ba 100%);
-    min-height: 100vh;
 }
 
 /* Navbar */
@@ -62,7 +61,7 @@ p{
 /* content */
 
 .container-css{
-    padding: 5rem;
+    padding: 3rem 5rem;
 }
 
 .profile-pic{
@@ -88,6 +87,18 @@ p{
 
 .connect-icon{
     margin: 0.25rem;
+}
+
+.dow-button{
+    margin: 1rem 0;
+    padding: 0.8rem;
+    align-items: center;
+    text-align: center;
+    border-radius: 100px;
+}
+
+.dow-icon{
+    margin: 0 7px;
 }
 
 
@@ -172,6 +183,7 @@ p{
     font-size: 2rem;
     display: block;
     font-weight: 600;
+    cursor: context-menu;
 }
 
 .description{
@@ -268,6 +280,7 @@ circle{
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 5px;
+    cursor: context-menu;
 }
 
 
@@ -286,14 +299,12 @@ circle{
     }
     #intro{
     background: linear-gradient(120deg,#fff,#fff 60%,#3281ba 60%, #3281ba 100%);
-    min-height: 60vh;
     }
 }
 
 @media (max-width:990px)and (min-width: 768px){
     #intro{
         background: linear-gradient(120deg,#fff,#fff 60%,#3281ba 60%, #3281ba 100%);
-        min-height: 40vh;
     }
     h1{
         font-size: 3rem;
@@ -322,7 +333,6 @@ circle{
 @media (max-width: 767px){
     #intro{
         background: #fff;
-        min-height: 92vh;
     }
 
     h1{
