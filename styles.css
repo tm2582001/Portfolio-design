@@ -96,6 +96,7 @@ p{
 #experience{
     background: rgb(81,150,229);
     padding: 2.5rem;
+    overflow: hidden;
 }
 
 .experience-heading{
@@ -118,6 +119,29 @@ p{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     position: relative;
 }
+
+.row-1{
+    opacity: 0;
+    right: 400px;
+    transition: opacity 1.5s ease-in-out, right 1.5s ease-out;
+}
+
+.row-1-animation{
+    right: 0;
+    opacity: 1;
+}
+
+.row-2{
+    opacity: 0;
+    left: 400px;
+    transition: opacity 1.5s ease-in-out, left 1.5s ease-out;
+}
+
+.row-2-animation{
+    left: 0;
+    opacity: 1;
+}
+
 
 .work section::before{
     content: "";
@@ -202,8 +226,7 @@ p{
                 inset -4px -4px 6px -1px rgba(225, 225, 225, 0.7),
                 -0.5px -0.5px 0px rgba(225, 225, 225, 1),
                 0.5px 0.5px 0px rgba(0, 0, 0, 0.15);
-                /* 0px 12px 10px -10px rgba(0, 0, 0, 0.5); */
-    
+
     border-radius: 50%;
     width: 160px;
     height: 160px;

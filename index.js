@@ -2,7 +2,7 @@ let id = (id) => document.getElementById(id);
 let classes = (classes) => document.getElementsByClassName(classes);
 let queryAll = (queryAll) => document.querySelectorAll(queryAll);
 
-let value =[99,95,96,94];
+let value =[99,95,96,94];   // percentage of skills
 
 for(let i =0;i<value.length;i++){
     const circle = queryAll("svg circle")[i];
@@ -23,22 +23,37 @@ function counter (number,maxPercentage){
 
 function skillPercentage(val){
     let number = classes("number")[val];
-    console.log(number.innerHTML);
+
     if(number.innerHTML == "--"){
         counter(number,value[val]); 
     }
 }
 
 
-var skillCards = classes("skill-cards");
+let skillCards = classes("skill-cards");
 for(let i=0;i<skillCards.length;i++){
     new Waypoint({
         element: skillCards[i],
-        handler: function() {
+        handler: () => {
                 const circle = queryAll("svg circle")[i];
                 circle.style.setProperty("animation", "anim 2s linear forwards");
             skillPercentage(i);
         },
-        offset: "80%",
+        offset: "80%"
       });
+}
+
+let workCards = classes("work");
+for(let i=0;i<workCards.length;i++){
+    new Waypoint({
+        element: workCards[i],
+        handler: () =>{
+            if(i%2===0){
+                workCards[i].classList.add("row-1-animation");
+            }else{
+                workCards[i].classList.add("row-2-animation");
+            }
+        },
+        offset: "75%"  
+    });
 }
