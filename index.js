@@ -43,6 +43,7 @@ for(let i=0;i<skillCards.length;i++){
       });
 }
 
+
 let workCards = classes("work");
 for(let i=0;i<workCards.length;i++){
     new Waypoint({
