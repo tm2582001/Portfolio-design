@@ -2,7 +2,7 @@ let id = (id) => document.getElementById(id);
 let classes = (classes) => document.getElementsByClassName(classes);
 let queryAll = (queryAll) => document.querySelectorAll(queryAll);
 
-let value =[99,95,96,94];   // percentage of skills
+let value =[99,95,96,94,97,98,93]   // percentage of skills
 
 for(let i =0;i<value.length;i++){
     const circle = queryAll("svg circle")[i];
